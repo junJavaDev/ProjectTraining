@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Person</title>
 </head>
 <body>
-    <p th:text="${person.name}">VALUE</p>
-    <p th:text="${person.id}">VALUE</p>
+    <p th:text="${person.name+', '+person.age}">VALUE</p>
+    <p th:text="${'id = ' + person.id}">VALUE</p>
+    <p th:text="${'email = ' + person.email}">VALUE</p>
+    <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
+    <form th:method="DELETE" th:action="@{/people/{id}(id=${person.id})}">
+        <input type="submit" value="Delete"/>
+    </form>
+<br/>
     <a href="/people">To people list</a>
 </body>
 </html>
