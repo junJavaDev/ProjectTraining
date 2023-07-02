@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.jvst</groupId>
-    <artifactId>math-micro</artifactId>
+    <artifactId>mathmicro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>math-micro</name>
     <description>math-micro</description>
